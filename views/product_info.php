@@ -10,7 +10,7 @@
     </head>
     <body>
         
-        <form action="../controllers/Product_info_controller.php" method="post" class="col-12 mx-auto mt-5 ;">
+        <form action="../controllers/product_info_controller.php" method="post" class="col-12 mx-auto mt-5 ;">
             <div class="col-7  mx-auto" style="height: 180px;">
                 <div class="row">
                     <p class="mb-4">

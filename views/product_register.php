@@ -11,11 +11,11 @@
     </head>
     <body>
         <div class="container" style="margin-top: 100px;">
-            <p class="row">
+            <div class="row">
                 <?php
-                   echo "<p class=\"text-danger\" id=\"register_message\>"."</p>";
+                   echo "<p class=\"mb-3\" </p>";
                 ?>
-            </p>
+            </div>
             <form action="../controllers/product_register_controller.php" method="post">
                 <div class="form-group">
                     <div class="row">  
@@ -37,10 +37,8 @@
                     </div>
                     <div class="d-flex row mt-5 justify-content-end  ">
                         <button class="col-2 btn btn-outline-success" name="btn_action" value="register" type="submit" onClick ="return regist_check()">登録
-                        <button class="col-2 ms-5 btn btn-outline-secondary" name="btn_action" value="pageback">戻る
-                    </div>
-                </div>
-            </form> 
+                        <button class="col-2 ms-5 btn btn-outline-secondary" name="btn_action" value="pageback" type="submit">戻る
+                  
         </div>
     </body>
 </html>
