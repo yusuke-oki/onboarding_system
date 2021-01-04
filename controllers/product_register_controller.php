@@ -7,7 +7,7 @@ require_once "../models/forms/Product_form.php";
  * @subpackage -
  * @category   -
  * @author     沖中  
- * @link       -
+ * @link       ---
  */
 
 class Product_register_controller
@@ -55,7 +55,6 @@ class Product_register_controller
         exit;
     }
 }
-
 
 $product_register_controller_object = new Product_register_controller;
 $product_register_controller_object->product_register_btn_access();
