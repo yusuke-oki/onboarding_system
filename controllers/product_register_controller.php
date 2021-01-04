@@ -7,7 +7,7 @@ require_once "../models/forms/Product_form.php";
  * @subpackage -
  * @category   -
  * @author     沖中  
- * @link       ---
+ * @link       -
  */
 
 class Product_register_controller
