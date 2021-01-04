@@ -18,7 +18,12 @@ class Product_regist_logic
      */
     public function item_regist($regist_item_object)
     {
-
+        $ret = false;
+        $product_dao = new Product_dao();
+        try
+        {
+            $dbh = $product_dao->db_start();
+        } 
     }
 
 
