@@ -43,7 +43,9 @@ class Product_info_controller
                         $item_list_object->set_message("");
                         $this->show_item_list($item_list_object);
                         break;
+                    
                         
+                    // 商品登録画面の戻るボタン押下
                     case "reg_pageback":
                         $item_list_object->set_item_cd($_SESSION["search_params"]->get_item_cd());
                         $item_list_object->set_item_name($_SESSION["search_params"]->get_item_name());
