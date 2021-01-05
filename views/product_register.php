@@ -38,7 +38,9 @@
                     <div class="d-flex row mt-5 justify-content-end  ">
                         <button class="col-2 btn btn-outline-success" name="btn_action" value="register" type="submit" onClick ="return regist_check()">登録
                         <button class="col-2 ms-5 btn btn-outline-secondary" name="btn_action" value="pageback" type="submit">戻る
-                  
+                    </div>
+                </div>
+            </form>
         </div>
     </body>
 </html>
