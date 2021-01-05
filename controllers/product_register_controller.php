@@ -67,6 +67,20 @@ class Product_register_controller
         $regist_item_object->set_item_name($_POST["regist_item_name"]);
         $regist_item_object->set_item_div_cd($_POST["itemdiv_selecter"]);
         $regist_item_object->set_unitprice($_POST["regist_unitprice"]);
+
+        $regist_logic = new Product_regist_logic();
+        try
+        {
+            //既に登録されていた場合は商品マスタ一覧画面へ移行
+            $regist_result = $regist_logic->item_regist($regist_item_object);
+            if($regist_result == true)
+            {
+            header("Location./product_info_controller.php?btn_action=default&referer_action=reg_success",true,301);
+            exit;
+            }
+
+        }
+
     }
 
     private function click_pageback()
