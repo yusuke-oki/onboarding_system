@@ -78,9 +78,11 @@ class Product_register_controller
             header("Location./product_info_controller.php?btn_action=default&referer_action=reg_success",true,301);
             exit;
             }
-
+        }catch(PDOException $e)
+        {
+            $regist_item_object->set_message("DBの登録に失敗しました。");
         }
-
+        $this->show_product_register($regist_item_object);
     }
 
     private function click_pageback()
