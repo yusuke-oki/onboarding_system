@@ -25,12 +25,18 @@ class Product_register_controller
 
         switch($register_btn_params)
         {
+            // 初期表示
             case "default":
                 $_SESSION["item_category"] = $regist_item_object->get_item_category_list();
                 $this->show_product_register($regist_item_object);
                 break;
-                
 
+            // 登録ボタン押下
+            case  "register":
+                $this->regist($regist_item_object);
+                break;
+
+            // 戻るボタン押下
             case "pageback":
                 $this->click_pageback();
                 break;
@@ -39,7 +45,8 @@ class Product_register_controller
         
         
     }
-    private function show_product_register()
+    // 商品新規登録のviewを呼び出す
+    private function show_product_register($regist_item_object)
     {
             ob_start();
             require "../views/product_register.php";
@@ -47,6 +54,19 @@ class Product_register_controller
             ob_end_clean();
             echo $view_product_register;
             exit;
+    }
+
+    /*
+     * 商品の新規登録処理
+     * @param Product_form $regist_item_object
+     */
+    private function regist($regist_item_object)
+    {
+        //パラメータを保持
+        $regist_item_object->set_item_cd($_POST["regist_item_cd"]);
+        $regist_item_object->set_item_name($_POST["regist_item_name"]);
+        $regist_item_object->set_item_div_cd($_POST["itemdiv_selecter"]);
+        $regist_item_object->set_unitprice($_POST["regist_unitprice"]);
     }
 
     private function click_pageback()
